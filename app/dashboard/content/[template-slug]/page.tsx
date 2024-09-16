@@ -30,7 +30,7 @@ function CreateNewContent(props:PROPS) {
     const [loading,setLoading]=useState(false);
     const [aiOutput,setAiOutput]=useState<string>('');
     const {user}=useUser();
-    const router=useRouter();
+    
     const {totalUsage,setTotalUsage}=useContext(TotalUsageContext)
     const {userSubscription,setUserSubscription}=useContext(UserSubscriptionContext);
     const {updateCreditUsage,setUpdateCreditUsage}=useContext(UpdateCreditUsageContext)
