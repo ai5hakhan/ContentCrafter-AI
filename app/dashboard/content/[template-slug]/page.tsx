@@ -39,7 +39,7 @@ function CreateNewContent(props:PROPS) {
       if(totalUsage>=10000&&!userSubscription)
       {
         console.log("Please Upgrade");
-        router.push('/dashboard/billing')
+        useRouter().push('/dashboard/billing')
         return ;
       }
       setLoading(true);
