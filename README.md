@@ -34,9 +34,9 @@ Drizzle ORM: For interacting with PostgreSQL databases.
 Vercel: For easy cloud deployment and hosting.
 
 📸 Screenshots
-![Screenshot 184](public/Screenshot(184).png)
-![Screenshot 185](public/Screenshot(185).png)
-![Screenshot 186](public/Screenshot(186).png)
+![Screenshot 184](public/Screenshot (184).png)
+![Screenshot 185](public/Screenshot (185).png)
+![Screenshot 186](public/Screenshot (186).png)
 
 
 
