@@ -30,7 +30,6 @@ function CreateNewContent(props:PROPS) {
     const [loading,setLoading]=useState(false);
     const [aiOutput,setAiOutput]=useState<string>('');
     const {user}=useUser();
-    const router=useRouter();
     const {totalUsage,setTotalUsage}=useContext(TotalUsageContext)
     const {userSubscription,setUserSubscription}=useContext(UserSubscriptionContext);
     const {updateCreditUsage,setUpdateCreditUsage}=useContext(UpdateCreditUsageContext)
@@ -39,7 +38,7 @@ function CreateNewContent(props:PROPS) {
       if(totalUsage>=10000&&!userSubscription)
       {
         console.log("Please Upgrade");
-        router.push('/dashboard/billing')
+        (useRouter()).push('/dashboard/Billing')
         return ;
       }
       setLoading(true);
