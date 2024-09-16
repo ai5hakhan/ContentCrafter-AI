@@ -30,32 +30,32 @@ function CreateNewContent(props:PROPS) {
     const [loading,setLoading]=useState(false);
     const [aiOutput,setAiOutput]=useState<string>('');
     const {user}=useUser();
+    
     const {totalUsage,setTotalUsage}=useContext(TotalUsageContext)
     const {userSubscription,setUserSubscription}=useContext(UserSubscriptionContext);
     const {updateCreditUsage,setUpdateCreditUsage}=useContext(UpdateCreditUsageContext)
     
-    const GenerateAIContent=async(formData:any)=>{
-      if(totalUsage>=10000&&!userSubscription)
-      {
-        console.log("Please Upgrade");
-        (useRouter()).push('/dashboard/Billing')
-        return ;
-      }
-      setLoading(true);
-      const SelectedPrompt=selectedTemplate?.aiPrompt;
-      
-      const FinalAIPrompt=JSON.stringify(formData)+", "+SelectedPrompt;
-
-      const result=await chatSession.sendMessage(FinalAIPrompt)
-
-      
-      setAiOutput(result?.response.text())
-      await SaveInDb(JSON.stringify(formData),selectedTemplate?.slug,result?.response.text())
-      setLoading(false);
-
-      setUpdateCreditUsage(Date.now())
-
+    async function GenerateAIContent(formData: any) {
+    if (totalUsage >= 10000 && !userSubscription) {
+      console.log("Please Upgrade")
+      useRouter().push('/dashboard/Billing')
+      return
     }
+    setLoading(true)
+    const SelectedPrompt = selectedTemplate?.aiPrompt
+
+    const FinalAIPrompt = JSON.stringify(formData) + ", " + SelectedPrompt
+
+    const result = await chatSession.sendMessage(FinalAIPrompt)
+
+
+    setAiOutput(result?.response.text())
+    await SaveInDb(JSON.stringify(formData), selectedTemplate?.slug, result?.response.text())
+    setLoading(false)
+
+    setUpdateCreditUsage(Date.now())
+
+  }
 
     const SaveInDb=async(formData:any,slug:any,aiResp:string)=>{
       const result=await db.insert(AIOutput).values({
