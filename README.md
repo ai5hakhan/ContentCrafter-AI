@@ -3,6 +3,15 @@ Build & Deploy AI Content Generator App Using Next.js, React, Tailwind CSS, Type
 
 🎉 Dive into this AI-powered content generator app designed to leverage cutting-edge technologies for a seamless content creation experience. Explore the app’s powerful features and see how it integrates various modern tools to deliver a comprehensive solution.
 
+📸 Screenshots
+![Screenshot 184](public/Screenshot%20(184).png)
+
+![Screenshot 185](public/Screenshot%20(185).png)
+
+![Screenshot 186](public/Screenshot%20(186).png)
+
+
+
 🌟 Features
 🧠 AI-Powered Content Generation
 Harness the capabilities of Google Gemini API to generate high-quality content based on user inputs. The app's AI engine can handle diverse content types and provide intelligent suggestions to enhance your content creation process.
@@ -33,10 +42,6 @@ Clerk: For handling authentication and user management.
 Drizzle ORM: For interacting with PostgreSQL databases.
 Vercel: For easy cloud deployment and hosting.
 
-📸 Screenshots
-![Screenshot 184](public/Screenshot%20(184).png)
-![Screenshot 185](public/Screenshot%20(185).png)
-![Screenshot 186](public/Screenshot%20(186).png)
 
 
 
