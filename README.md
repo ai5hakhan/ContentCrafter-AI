@@ -1,4 +1,4 @@
-AI Content Generator App 🚀
+Content Crafter AI 🚀
 Build & Deploy AI Content Generator App Using Next.js, React, Tailwind CSS, TypeScript, Gemini, Clerk 💻✨
 
 🎉 Dive into this AI-powered content generator app designed to leverage cutting-edge technologies for a seamless content creation experience. Explore the app’s powerful features and see how it integrates various modern tools to deliver a comprehensive solution.
