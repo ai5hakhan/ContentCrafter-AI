@@ -17,7 +17,7 @@ function UsageTrack() {
     const [maxWords,setMaxWords]=useState(10000)
     const {updateCreditUsage,setUpdateCreditUsage}=useContext(UpdateCreditUsageContext);
 
-    useEffect(()=>{``
+    useEffect(()=>{
         user&&GetData();
         user&&IsUserSubscribe();
     },[user])
